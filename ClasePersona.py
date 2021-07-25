@@ -30,16 +30,20 @@ class Cliente:
         else: 
             print("Ingrese una calificación válida")  
 
+
 class Egresos():
     def __init__(self):
-      
         self.consolidadogasto = []
+
+    def tablagasto(self):
+        self.secuenciagasto = input("Por favor ingrese un número a su gasto: ")
         self.nomgasto = input("Por favor ingrese el nombre del gasto: ")
         self.nomfrecuencia = input("Por favor ingrese frecuencia\n 1 mensual\n 2 quincenal\n 4 semanal\n y 30 diario\n ")
         self.nomvalor = input("Por favor ingrese el valor del gasto: ")
         nuevogasto = (self.nomgasto, self.nomfrecuencia, self.nomvalor)
-        self.consolidadogasto.append(nuevogasto) 
+        self.consolidadogasto.append(nuevogasto) # Pendiente que acumule gastos en la misma tabla
         print("Nuevo gasto incluido")
+        print( self.consolidadogasto)
    
         
         
@@ -48,4 +52,4 @@ class Egresos():
 # cliente1= Cliente()
 # cliente1.calificacioninicial()
 egreso1= Egresos()
-egreso1.consolidadogasto()
+egreso1.tablagasto()
