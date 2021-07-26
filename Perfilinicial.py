@@ -18,7 +18,10 @@ class Endeudamiento:
     def __init__(self):
       
         self.totaldeudas = []
-        # self.nomdeuda = map de lista de egresos Egresos.consolidadogasto con la suma de todos los valores
+        # self.nomdeuda = map de lista de egresos Egresos.consolidadogasto con la suma de todos los gastos multiplicados por frecuencia
+        self.nomdeuda = map(lambda x: x[2]*x[3], (Egresos.consolidadogasto[i][1:])) for i in range(len(Egresos.consolidadogasto))
+        self.totaldeudas.append(self.nomdeuda)
+
 
 class Estudio: 
     def __init__(self):
